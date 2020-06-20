@@ -2,7 +2,7 @@ import React from "react";
 import { MDBCol, MDBRow, MDBIcon } from "mdbreact";
 import Fade from "react-reveal/Fade";
 import "../style/gallery.scss";
-const URL = "http://localhost:5000/images/gallery/";
+const URL = "/images/gallery/";
 
 class Gallery extends React.Component {
   constructor(props) {
