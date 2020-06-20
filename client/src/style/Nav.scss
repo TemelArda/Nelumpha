@@ -1,0 +1,173 @@
+$colors: (
+  light: #E5D0B6,
+  accent1: #BEA078,
+  brand: #df7e65,
+  accent2: #746F5F,
+  dark: #6E2420,
+);
+
+.nav-active{
+    width: 18.5rem !important;
+}
+
+.nav{
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    width: 5rem;
+    z-index: 999;
+    transition: width .2s ease-in-out;
+    .nav-tag{
+        background-color: map-get($colors, dark);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        height: 5%;
+        width: 100%;
+        .tag-icon{
+            font-size: 2.5em;
+            color: map-get($colors, light );
+            filter: grayscale(40%) opacity(0.5);
+            transition: all .5s ease-in;
+        }
+        .icon-active{
+            transform: rotateZ(-180deg);
+            filter: grayscale(0%) opacity(1);
+        }
+    }
+
+    .nav-brand{
+        background-color: map-get($colors, dark);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        height: 10%;
+        width: 100%;
+        .brand{
+            position: absolute;
+            right: 2%;
+            width: auto;
+            height: 70%;
+            fill: map-get($colors, brand);
+            stroke: map-get($colors, brand) ;
+            opacity: 0.5;
+            margin: 5px;
+            transition: all .3s ease-in;
+        }
+        .brand-text{
+            display: none;
+            position: absolute;
+            text-align: center;
+            color: map-get($colors, brand ) !important;
+            transition: transform .3s ease-in;
+            right: 35%;
+        }
+        .active-brand{
+            opacity: 1 !important;
+        }
+    }
+    .active{
+        display: initial !important;
+        opacity: 1 !important;
+        margin-right: 5px;
+    }
+    .strong{
+        font-size: 2rem !important;
+        position: relative;
+        bottom: 50px;
+        color:  white !important;
+    }
+    .nav-list{
+        height: 100%;
+        width:100%;
+        display: flex;
+        background-color:  #a83731;
+        align-items: center;
+        justify-content: center;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0px;
+        margin-top: 0px;
+        width: 100%;
+        .nav-link{
+            cursor: pointer;
+            transition: all .5s;
+            display: flex;
+            height: 5rem;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .nav-icon{
+            font-size: 2.5rem;
+            color: map-get($colors, light );
+            filter: grayscale(50%) opacity(0.8);
+        }
+        .nav-text{
+            display: none;
+            margin-left: 10px;
+            color: map-get($colors , light );
+        }
+
+        .nav-link:hover{
+            background-color: map-get($colors, dark); 
+            .nav-icon{
+                filter: grayscale(0%) opacity(1);
+            }
+        }
+       
+        a{
+            font-size: 2.0rem;
+            width: fit-content;
+            text-decoration: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .nav-link{
+        margin: 0 0px !important;
+    }
+}
+@media only screen and (max-width:910px){
+    .nav-active{
+        width: 100vw;
+    }
+    
+    .nav{
+        bottom: 0;
+        width: 100vw !important;
+        height: 5rem;
+        .active{
+            display: none !important;
+            opacity: 0 !important;
+        }
+        .nav-text{
+            display: none !important;
+            margin-left: 0px;
+            opacity: 0;
+        }
+        .nav-tag{
+            display: none;
+        }
+        .nav-brand{
+            display: none;
+        }
+        ul{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0px;
+        }
+        .nav-link{
+            margin: 0 25px;
+        }
+    }
+}

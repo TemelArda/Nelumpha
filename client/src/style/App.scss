@@ -1,0 +1,378 @@
+$colors: (
+  light: #E5D0B6,
+  accent1: #BEA078,
+  brand: #B96C58,
+  accent2: #746F5F,
+  dark: #6E2420,
+);
+:root{
+  font-size: 16px !important;
+}
+
+body {
+  background-color: map-get($colors, light) !important;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+  width: 0.4rem;
+}
+body::-webkit-scrollbar-track{
+   background-color: map-get($colors, accent2 );
+}
+body::-webkit-scrollbar-thumb{
+  background: #a83731;
+}
+
+.main{
+  margin-left: 5rem !important;
+}
+a{
+  cursor: pointer;
+}
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+.logo {
+  width: 10%;
+  position: fixed;
+  cursor: pointer;
+  padding: 10px;
+  margin: 40px 5rem;
+  z-index: 999;
+  stroke: map-get($colors, brand);
+  fill: map-get($colors, brand);
+}
+.gallery-title {
+  font-size: 2.3rem;
+  color: map-get($colors, dark) !important;
+  margin: 0px;
+}
+
+.gallery-line {
+  border-color: map-get($colors, dark);
+  width: 30vw;
+  margin-top: 0px;
+}
+.gallery-text{
+  font-size: 1.6em;
+  text-align: center;
+  font-weight: 700;
+  color: map-get($colors, dark );
+  a{
+    color: map-get($colors, dark );
+  }
+}
+.hero {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: map-get($colors, light) !important;
+  }
+  position: relative;
+  background: linear-gradient(to right, #173147ec, #53465f7e, rgba(185, 107, 88, 0.363)), url("../images/bg0.jpg");
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h6 {
+    line-height: 1.6 !important;
+  }
+  .content {
+    display: flex;
+    position: relative;
+    left: 0px;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    // background-color: rgba(110, 36, 32, 0.397);
+    justify-content: center;
+    text-align: left;
+  }
+  .call-to-action{
+    padding-left: 25px;
+    text-align: center;
+  }
+  .titles{
+    width: fit-content;
+  }
+  .title {
+    background-color: map-get($colors, dark);
+    font-size: 7rem;
+  }
+  .title2{
+    background-color: map-get($colors, dark);
+    text-align: center;
+    
+  }
+  .btn {
+    position: relative;
+    border: 5px solid map-get($colors, dark);
+    right: 0px;
+    width: 150px;
+    height: 45px;
+    margin-right: 15px;
+    padding: 0px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+      0 100px 80px rgba(0, 0, 0, 0.07);
+
+    .init {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    .inner {
+      position: absolute;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: map-get($colors, dark);
+      width: 100%;
+      height: 100%;
+      clip-path: circle(10% at 0% 0%);
+      transition: all 0.5s ease-in-out;
+    }
+    a {
+      text-decoration: none;
+      color: map-get($colors, light );
+      font-size: 1.3em;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  .btn:hover {
+      border-color: map-get($colors, dark);
+    .inner {
+        clip-path: circle(80%);
+        a {
+          color: map-get($colors, light );
+        }
+  }
+    // background-color:map-get($colors, accent);
+  }
+  .btn:active .inner {
+    clip-path: circle(80%);
+  }
+  .socials {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    ul {
+      list-style: none;
+    }
+    li{
+      background-color: #948e7aa9;
+      border-radius: 10px;
+      box-shadow:
+  0 2px 2.3px rgba(0, 0, 0, 0.186),
+  0 5.6px 6.3px rgba(0, 0, 0, 0.25),
+  0 13.6px 15.1px rgba(0, 0, 0, 0.282),
+  0 45px 50px rgba(0, 0, 0, 0.29)
+;
+      margin: 0 13px;
+      transition: all .3s ease-out;
+
+    }
+    i {
+      color: map-get($colors, dark);
+    }
+    li:hover {
+      transform: translateY(-10px);
+      // i {
+      //   color: map-get($colors, light );
+      // }
+    }
+  }
+}
+.clients{
+  margin: 10vh 0px;
+  h1{
+    margin-bottom: 20px;
+    color: map-get($colors, dark ) !important;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+}
+.swiper-container{
+  height: 15vh !important;
+  margin-left: 60px !important;
+  margin-right: 60px !important;
+  padding: 20px !important;
+  border-radius: 10px;
+  background-color: rgba(150, 135, 118, 0.733);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+      0 100px 80px rgba(0, 0, 0, 0.07);
+}
+.swiper-slide{
+  padding-top: 10px;
+  background-color: map-get($colors , dark);
+  height: fit-content;
+  width: fit-content;
+  img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 100%;
+    margin: auto;
+  }
+  h4{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    color: map-get($colors, light ) ;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    background-color: map-get($colors, accent2);
+    
+  }
+}
+.swiper-slide:hover{
+  h4{
+      opacity: 1;
+  }
+}
+
+.swiper-slide::after{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 20px;
+  background-color: map-get($colors, dark);
+  transform: rotateY(90deg) translateX(10px) translateZ(-10px);
+    
+}
+.swiper-slide::before{
+  content: ' ';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 20px;
+  background-color: map-get($colors, dark);
+  transform: rotateY(90deg) translateX(10px) translateZ(10px);
+}
+.social-title{
+  color: map-get($colors, dark );
+}
+.social-hr{
+  border-color: map-get($colors, dark);
+  width: 65vh;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+.insta-container{
+  background-color: map-get($colors, accent1);
+  padding: 40px 0px;
+}
+
+footer{
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a {
+    color: map-get($colors, light) !important;
+  }
+  background-color: map-get($colors, dark);
+  .icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .icon{
+    color: map-get($colors, dark) !important;
+    padding: 15px;
+    clip-path: circle(45% at 50% 50%);
+    background-color: map-get($colors, light) !important;
+  }
+  a{
+    font-size: 1.3em;
+  }
+  a:hover{
+    color:map-get($colors, accent1) !important;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+  .socials {
+    li {
+      margin: 0 7px;
+    }
+  }
+}
+@media only screen and (max-width: 910px) {
+  .main{
+    margin-left: 0px !important;
+  }
+  .logo {
+    width: 20%;
+  }
+  .swiper-container{
+    height: 20vh !important;
+  }
+  .hero{
+    h2, h5, h1{
+      text-align: left;
+      white-space: wrap;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .gallery-title {
+    font-size: 2.3em;
+  }
+  .gallery-line {
+    width: 80vw;
+  }
+  footer{
+    .icon-container{
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+  }
+  .hero{
+    .titles{
+      padding-left: 5px;
+    }
+    .call-to-action{
+      padding-left: 5px;
+    }
+    .title{
+      font-size: 4rem;
+      white-space: wrap;
+    }
+  } 
+  .gallery-media {
+    margin: 0px 15px;
+  }
+}

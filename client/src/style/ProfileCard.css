@@ -1,0 +1,30 @@
+
+.p-card .p-card-content{
+    position: relative;
+}
+
+.p-card h4{
+    color:#e0f7fa;
+}
+.p-card h6{
+    color:#e0f7fa; 
+}
+.p-card-container{
+    /* width: calc(100% - 30px) !important; */
+}
+.p-card img{
+    border-radius: 5px;
+    max-height:100%;
+    max-width: 100%;
+}
+.p-card{    
+    border-radius: 5px;
+    background-color: rgb(65, 65, 65);
+    height: 45vh;
+    box-shadow:
+    -15px -15px 15px rgb(64, 64, 64,0),
+    15px 15px 15px rgba(0, 0, 0, 0.05),
+    inset 4px 4px 5px rgba(65,65,65,0.8),
+    inset -4px -4px 5px rgba(0, 0, 0, 0.5) ;
+
+}

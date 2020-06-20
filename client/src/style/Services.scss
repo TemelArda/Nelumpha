@@ -1,0 +1,155 @@
+$colors: (
+  light: #e5d0b6,
+  accent1: #bea078,
+  brand: #b96c58,
+  accent2: #746f5f,
+  dark: #6e2420,
+);
+
+.service {
+  min-height: 100vh;
+  height: fit-content;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  .jumbotron {
+    width: 65vw;
+    height: auto;
+    background: linear-gradient(
+        to right,
+        #17314788,
+        #53465f81,
+        rgba(187, 87, 61, 0.349)
+      ),
+      url("../images/bg2.jpg");
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 1.2px 20.8px rgba(0, 0, 0, 0.1),
+      0 2.9px 35.1px rgba(0, 0, 0, 0.134), 0 5.8px 44.3px rgba(0, 0, 0, 0.157),
+      0 10.3px 49.8px rgba(0, 0, 0, 0.178), 0 18.2px 53.7px rgba(0, 0, 0, 0.203),
+      0 34.2px 60.4px rgba(0, 0, 0, 0.24), 0 81px 91px rgba(0, 0, 0, 0.35);
+    h1,
+    p {
+      color: map-get($colors, light);
+      text-align: center;
+    }
+    p {
+      position: absolute;
+      bottom: -10%;
+      left: -45px;
+      right: -45px;
+      margin: 0;
+      font-size: 1.5em;
+      background-color: map-get($colors, dark);
+      padding: 5px 20px;
+    }
+    ul {
+      list-style: none;
+    }
+    li {
+      background-color: #948e7aa9;
+      border-radius: 10px;
+      box-shadow: 0 2px 2.3px rgba(0, 0, 0, 0.186),
+        0 5.6px 6.3px rgba(0, 0, 0, 0.25), 0 13.6px 15.1px rgba(0, 0, 0, 0.282),
+        0 45px 50px rgba(0, 0, 0, 0.29);
+      margin: 0 13px;
+      transition: all 0.3s ease-out;
+    }
+    i {
+      color: map-get($colors, dark);
+    }
+    li:hover {
+      transform: translateY(-10px);
+      // i {
+      //   color: map-get($colors, light );
+      // }
+    }
+  }
+  .serviceCard {
+    min-height: fit-content;
+    position: relative;
+    margin: 25px;
+    background-color: map-get($colors, dark);
+    box-shadow: 0 6.3px 5.3px rgba(0, 0, 0, 0.069),
+      0 21px 17.9px rgba(0, 0, 0, 0.101), 0 94px 80px rgba(0, 0, 0, 0.17);
+      border-radius: 10px;
+    h1 {
+      color: white;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      background: linear-gradient(
+          to right,
+          #17314788,
+          #53465f81,
+          rgba(187, 87, 61, 0.349)
+        ),
+        url("../images/bg0.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 5%;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s ease-out;
+      transform-origin: 100% 100%;
+      transform: scaleY(1);
+      box-shadow: 0 6.3px 5.3px rgba(0, 0, 0, 0.069),
+        0 21px 17.9px rgba(0, 0, 0, 0.101), 0 94px 80px rgba(0, 0, 0, 0.17);
+    }
+    p {
+      color: white;
+      font-size: 1.2em;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 20px;
+    }
+    hr {
+      border-color: white;
+      width: 60%;
+    }
+  }
+  .serviceCard:hover {
+    .head {
+      transform: scaleY(0);
+      transform: translateY(10%);
+      opacity: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .service .jumbotron {
+    width: 80vw;
+
+    h1 {
+      font-size: 5em;
+    }
+    p {
+      bottom: -15%;
+      font-size: 1.2em;
+      left: -30px;
+      right: -30px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .service .jumbotron {
+    width: 90vw;
+    p {
+      bottom: -30%;
+      left: -15px;
+      right: -15px;
+      font-size: 1em;
+    }
+  }
+}
