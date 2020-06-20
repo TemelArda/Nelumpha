@@ -223,6 +223,7 @@ a{
 .swiper-slide{
   padding-top: 10px;
   background-color: map-get($colors , dark);
+  min-height: 125.391px;
   height: fit-content;
   width: fit-content;
   img{
@@ -232,6 +233,7 @@ a{
     left: 0;
     right: 0;
     max-height: 100%;
+    width: auto;
     margin: auto;
   }
   h4{
