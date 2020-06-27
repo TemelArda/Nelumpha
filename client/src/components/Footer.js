@@ -9,7 +9,7 @@ class Footer extends React.Component {
         <hr></hr>
         <MDBRow>
           <MDBCol>
-            <h2 className="text-center">Contact Us</h2>
+          
             <MDBRow className="mt-4">
               <MDBCol sm="4" className="icon-container">
                 <MDBIcon className="icon" icon="map-marker-alt" size="2x" />

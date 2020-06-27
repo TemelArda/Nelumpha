@@ -45,27 +45,7 @@ $colors: (
       background-color: map-get($colors, dark);
       padding: 5px 20px;
     }
-    ul {
-      list-style: none;
-    }
-    li {
-      background-color: #948e7aa9;
-      border-radius: 10px;
-      box-shadow: 0 2px 2.3px rgba(0, 0, 0, 0.186),
-        0 5.6px 6.3px rgba(0, 0, 0, 0.25), 0 13.6px 15.1px rgba(0, 0, 0, 0.282),
-        0 45px 50px rgba(0, 0, 0, 0.29);
-      margin: 0 13px;
-      transition: all 0.3s ease-out;
-    }
-    i {
-      color: map-get($colors, dark);
-    }
-    li:hover {
-      transform: translateY(-10px);
-      // i {
-      //   color: map-get($colors, light );
-      // }
-    }
+    
   }
   .serviceCard {
     min-height: fit-content;
@@ -126,7 +106,38 @@ $colors: (
     }
   }
 }
+.maps-cotent{
+  height: 45vh;
+  background-color: #BEA078;
+}
+.contact-content{
+  min-height: fit-content;
+  height: 20vh;
+}
 
+.socials{
+  ul {
+    list-style: none;
+  }
+  li {
+    background-color: #948e7aa9;
+    border-radius: 10px;
+    box-shadow: 0 2px 2.3px rgba(0, 0, 0, 0.186),
+      0 5.6px 6.3px rgba(0, 0, 0, 0.25), 0 13.6px 15.1px rgba(0, 0, 0, 0.282),
+      0 45px 50px rgba(0, 0, 0, 0.29);
+    margin: 0 13px;
+    transition: all 0.3s ease-out;
+  }
+  i {
+    color: map-get($colors, dark);
+  }
+  li:hover {
+    transform: translateY(-10px);
+    // i {
+    //   color: map-get($colors, light );
+    // }
+  }
+}
 @media only screen and (max-width: 900px) {
   .service .jumbotron {
     width: 80vw;

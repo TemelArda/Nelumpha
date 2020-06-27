@@ -3,6 +3,8 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const clients = require('./routes/api/clients');
+const maps = require('./routes/api/maps');
+const inqueries = require('./routes/api/inqueries');
 var cors = require('cors');
 
 
@@ -18,6 +20,8 @@ myApp.use(cors());
 myApp.use(bodyParser.json());
 myApp.use(express.static(path.join(__dirname, 'public')));
 myApp.use('/api/clients', clients);
+myApp.use('/api/maps', maps );
+myApp.use('/api/inqueries', inqueries );
 
 if(process.env.NODE_ENV === 'production'){
     myApp.use(express.static(path.join(__dirname, 'client/build')));
